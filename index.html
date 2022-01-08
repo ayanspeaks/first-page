@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>My First Page</title>
+
+		<style type="text/css">
+			body {
+			  background-image: url('https://images5.alphacoders.com/521/521476.jpg');
+			}
+		</style>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	</head>
+	<body>
+		<div id="content" style="display: flex; justify-content: center; align-items: center; height: 100vh">
+
+			<label for="ip">Enter a number:&nbsp;</label>
+			<input id="ip" type="number">&nbsp;
+
+			<button id="btn" type="button">Submit</button>
+			<br><br>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		document.getElementById("btn").addEventListener("click", display);
+
+		function display() {
+			var val = document.getElementById("ip").value.toString();
+			var res = '';
+			for(let s of val) res += s == '0' ? '5' : s;
+			alert(res);
+		}
+
+	</script>
+</html>
